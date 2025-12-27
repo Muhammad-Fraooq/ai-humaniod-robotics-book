@@ -1,0 +1,478 @@
+/* custom.css - Updated with Theme Variables */
+
+/* ==============================================
+   ✅ GLOBAL THEME VARIABLES
+============================================== */
+
+:root {
+  /* Neon Primary Colors */
+  --primary-color: #7C3AED;
+  --primary-dark: #5B21B6;
+  --primary-darker: #009FB2;
+  --primary-darkest: #007D8C;
+  --primary-light: #33EEFF;
+  --primary-lighter: #66F5FF;
+  --primary-lightest: #99FAFF;
+  
+  /* Homepage Specific Light Mode Colors */
+  --homepage-bg: #fefefe;
+  --homepage-text: #0f172a;
+  --homepage-text-secondary: #475569;
+  --homepage-link-hover: #2563eb;
+  --homepage-link-hover-soft: #3b82f6;
+  --homepage-primary-button-bg: linear-gradient(135deg, #00E6FF 0%, #0066FF 100%);
+  --homepage-primary-button-text: #000000;
+  --homepage-secondary-button-border: linear-gradient(135deg, #00E6FF 0%, #8B5CFF 100%);
+  --homepage-secondary-button-text: #0066FF;
+  --homepage-card-bg: rgba(255, 255, 255, 0.92);
+  --homepage-card-border: rgba(0, 230, 255, 0.15);
+  --homepage-card-shadow: rgba(0, 102, 255, 0.08);
+  --homepage-section-bg-gradient-start: #f8fafc;
+  --homepage-section-bg-gradient-end: #ffffff;
+  --homepage-section-bg-darker: #f1f5f9;
+
+  /* Neon Gradients */
+  --neon-primary-color: linear-gradient(135deg, #00E6FF, #0066FF);
+  --neon-secondary-color: linear-gradient(135deg, #8B5CFF, #C026D3);
+  --neon-accent-color: linear-gradient(135deg, #377BFF, #00E6FF);
+  --neon-shadow-color: rgba(0, 230, 255, 0.15);
+  --glow-effect: rgba(0, 230, 255, 0.6);
+  --hover-glow: rgba(59, 130, 246, 0.3);
+
+  /* Docusaurus primary colors */
+  --ifm-color-primary: var(--primary-color);
+  --ifm-color-primary-dark: var(--primary-dark);
+  --ifm-color-primary-darker: var(--primary-darker);
+  --ifm-color-primary-darkest: var(--primary-darkest);
+  --ifm-color-primary-light: var(--primary-light);
+  --ifm-color-primary-lighter: var(--primary-lighter);
+  --ifm-color-primary-lightest: var(--primary-lightest);
+  
+  --ifm-background-color: #FFFFFF;
+  --ifm-text-color: #000000;
+  --ifm-color-emphasis-100: #F4F4F4;
+  --docusaurus-highlighted-code-line-bg: rgba(0,0,0,0.1);
+
+  /* Dark Mode Colors */
+  --dark-background: #0A0C1C;
+  --dark-secondary-bg: #12152B;
+  --dark-text: #FFFFFF;
+  --dark-emphasis-100: #1A1F3C;
+  
+  /* Shared values */
+  --font-base: 'Inter', sans-serif;
+  --section-padding: 8rem 0;
+  --border-radius: 1.5rem;
+  --transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Apply base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==============================================
+   ✅ DOCUSAURUS THEME OVERRIDES
+============================================== */
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --ifm-color-primary: var(--primary-color);
+  --ifm-color-primary-dark: var(--primary-dark);
+  --ifm-color-primary-darker: var(--primary-darker);
+  --ifm-color-primary-darkest: var(--primary-darkest);
+  --ifm-color-primary-light: var(--primary-light);
+  --ifm-color-primary-lighter: var(--primary-lighter);
+  --ifm-color-primary-lightest: var(--primary-lightest);
+
+  --ifm-background-color: var(--dark-background);
+  --ifm-text-color: var(--dark-text);
+  --ifm-color-emphasis-100: var(--dark-emphasis-100);
+  --docusaurus-highlighted-code-line-bg: rgba(255,255,255,0.08);
+
+  /* Homepage Specific Dark Mode Colors */
+  --homepage-bg: #05050a;
+  --homepage-text: #f1f5f9;
+  --homepage-text-secondary: #cbd5e1;
+  --homepage-link-hover: #22d3ee;
+  --homepage-link-hover-soft: #06b6d4;
+  --homepage-primary-button-bg: linear-gradient(135deg, #00E6FF 0%, #0066FF 100%);
+  --homepage-primary-button-text: #0f172a;
+  --homepage-secondary-button-border: linear-gradient(135deg, #00E6FF 0%, #8B5CFF 100%);
+  --homepage-secondary-button-text: #00E6FF;
+  --homepage-card-bg: rgba(30, 41, 59, 0.4);
+  --homepage-card-border: rgba(0, 230, 255, 0.2);
+  --homepage-card-shadow: rgba(0, 0, 0, 0.4);
+  --homepage-section-bg-gradient-start: #0a0a15;
+  --homepage-section-bg-gradient-end: #05050a;
+  --homepage-section-bg-darker: #0f172a;
+  --neon-shadow-color: rgba(0, 230, 255, 0.25);
+  --glow-effect: rgba(0, 230, 255, 0.8);
+  --hover-glow: rgba(0, 230, 255, 0.4);
+}
+
+/* ==============================================
+   ✅ SYNCHRONIZE WITH MAIN THEME
+============================================== */
+
+html, body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+a {
+  color: var(--ifm-color-primary);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+.navbar {
+  background: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.footer {
+  background: var(--dark-secondary-bg);
+}
+
+.container {
+  background: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-text-color);
+}
+
+p, li, span {
+  color: var(--ifm-text-color);
+}
+
+/* ==============================================
+   ✅ FEATURES COMPONENT
+============================================== */
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background: var(--ifm-background-color);
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+  filter: brightness(0) invert(0);
+}
+
+[data-theme='dark'] .featureSvg {
+  filter: brightness(0) invert(1);
+}
+
+.featureCard {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 230, 255, 0.2);
+}
+
+/* ==============================================
+   ✅ CUSTOM COMPONENTS
+============================================== */
+
+.neon-glow {
+  text-shadow: 0 0 10px var(--primary-color),
+               0 0 20px var(--primary-color),
+               0 0 30px var(--primary-color);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg,
+    var(--primary-color) 0%,
+    #8B5CFF 50%,
+    #377BFF 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .glass-card {
+  background: rgba(10, 12, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==============================================
+   ✅ BUTTON STYLES
+============================================== */
+
+.neon-button {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 20px var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.neon-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: 0.5s;
+}
+
+.neon-button:hover:before {
+  left: 100%;
+}
+
+/* ==============================================
+   ✅ ANIMATIONS
+============================================== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px var(--primary-color); }
+  50% { box-shadow: 0 0 20px var(--primary-color); }
+}
+
+/* ==============================================
+   ✅ RESPONSIVE UTILITIES
+============================================== */
+
+@media (max-width: 768px) {
+  .features {
+    padding: 1rem 0;
+  }
+
+  .featureSvg {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* ==============================================
+   ✅ MODAL STYLES (for AuthComponent)
+============================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ifm-text-color);
+}
+
+.authWrapper {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.authTabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.authTabs button {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  color: var(--ifm-text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.authTabs button:hover {
+  color: var(--ifm-color-primary);
+}
+
+.authTabs button.activeTab {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.authSeparator {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  color: var(--ifm-text-color);
+}
+
+.authSeparator::before,
+.authSeparator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.authSeparator::before {
+  left: 0;
+}
+
+.authSeparator::after {
+  right: 0;
+}
+
+.socialBtn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--ifm-color-emphasis-100);
+  border-radius: 5px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.socialBtn:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.authToggleForm {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.authToggleForm a {
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.authToggleForm a:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.register-form input,
+.login-form input {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+.register-form button,
+.login-form button {
+  margin-top: 15px;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.alert--success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.alert--error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.navbar__link {
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.navbar-logo-text {
+  color: var(--neon-secondary-color); /* Using a purple shade from defined variables */
+  font-weight: bold;
+}
+
+.footer__title {
+  color: var(--primary-dark);
+}
+
+[data-theme='dark'] .footer__title {
+  color: var(--dark-text);
+}
