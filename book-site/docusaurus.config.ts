@@ -111,7 +111,7 @@ const config: Config = {
               href: 'https://www.facebook.com/muhammad.farooq.2007',
             },
             {
-              label: 'X',
+              label: 'Twitter',
               href: 'x.com/Muhammaddev2007',
             },
           ],
