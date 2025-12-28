@@ -13,8 +13,12 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://muhammad-suleman-talib.github.io',
+  url: 'https://Muhammad-Fraooq.github.io',
   baseUrl: '/',
+
+  organizationName: 'Muhammad-Fraooq',
+  projectName: 'ai-humaniod-robotics-book',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
 
@@ -67,7 +71,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/muhammad-suleman-talib/humanoid_robotics_book',
+          href: 'https://github.com/Muhammad-Fraooq/ai-humaniod-robotics-book.git',
           label: 'GitHub',
           position: 'right',
         },
@@ -96,19 +100,19 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Socail Links',
           items: [
             {
               label: 'Linkedin',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://www.linkedin.com/in/muhammad-farooq-developer/',
             },
             {
               label: 'Facebook',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://www.facebook.com/muhammad.farooq.2007',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'x.com/Muhammaddev2007',
             },
           ],
         },
@@ -116,12 +120,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Medium',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://Muhammad-Fraooq.github.io',
             },
           ],
         },

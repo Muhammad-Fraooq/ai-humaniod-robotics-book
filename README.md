@@ -1,4 +1,4 @@
-# Humanoid Robotics Book
+# Pysical AI & Humanoid Robotics Book
 
 This project aims to provide comprehensive documentation for the build and deployment process of the Humanoid Robotics Book. The goal is to offer clear instructions for new developers, facilitating quick setup, building, running, and understanding the deployment workflow with minimal friction.
 
@@ -16,10 +16,8 @@ Follow these steps to get your local development environment set up:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/humanoid_robotics_book.git
-    cd humanoid_robotics_book
-    ```
-    (Note: Replace `https://github.com/your-username/humanoid_robotics_book.git` with the actual repository URL.)
+    git clone https://github.com/Muhammad-Fraooq/ai-humaniod-robotics-book.git
+    cd ai-humaniod-robotics-book
 
 2.  **Install dependencies:**
     If using npm:

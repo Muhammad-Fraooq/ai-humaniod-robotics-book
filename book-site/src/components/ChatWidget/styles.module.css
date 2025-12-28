@@ -28,31 +28,27 @@
   --overlay: rgba(15, 23, 42, 0.95);
 }
 
-/* Light Mode Variables */
 html.light-mode {
-  /* Primary Colors (same) */
-  --primary: #7C3AED;
-  --primary-dark: #5B21B6;
-  --primary-light: #8B5CF6;
-  --secondary: #0EA5E9;
-  
-  /* Background & Surface */
-  --background: #F9FAFB;    /* Very light gray */
-  --surface: #FFFFFF;       /* White */
-  --surface-light: #F3F4F6;
-  --surface-dark: #E5E7EB;
-  
- --text-primary: #111827;     /* Changed from #ffffff to dark gray */
-  --text-secondary: #4B5563;   /* Changed from #f9f9f9 to medium gray */
-  --text-tertiary: #6B7280;    /* This stays the same - already gray */
-  
-  /* UI Colors */
-  --success: #10B981;
-  --user-bubble: #4F46E5;   /* Lighter indigo for user bubbles */
-  --bot-bubble: #F3F4F6;    /* Very light gray for bot bubbles */
-  --border: #E5E7EB;        /* Light border */
-  --shadow: rgba(107, 114, 128, 0.1);
-  --overlay: rgba(255, 255, 255, 0.95);
+  --primary: #000000 !important;
+  --primary-dark: #000000 !important;
+  --primary-light: #000000 !important;
+  --secondary: #000000 !important;
+
+  --background: #FFFFFF !important;
+  --surface: #FFFFFF !important;
+  --surface-light: #FFFFFF !important;
+  --surface-dark: #FFFFFF !important;
+
+  --text-primary: #231c1c !important;
+  --text-secondary: #000000 !important;
+  --text-tertiary: #000000 !important;
+
+  --user-bubble: #f0f0f0 !important;
+  --bot-bubble: #f0f0f0 !important;
+
+  --border: #000000 !important;
+  --shadow: rgba(0, 0, 0, 0) !important;
+  --overlay: rgba(255, 255, 255, 0) !important;
 }
 
 .container {
@@ -198,6 +194,14 @@ html.light-mode {
   color: var(--text-secondary);
 }
 
+/* .title {
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+} */
+
 .headerRight {
   display: flex;
   gap: 8px;
@@ -295,7 +299,7 @@ html.light-mode {
 }
 
 .userMessage .messageAvatar {
-  background: linear-gradient(135deg, var(--user-bubble), var(--primary));
+  background: #000000 !important;
   border-color: transparent;
   color: white;
 }
@@ -323,17 +327,18 @@ html.light-mode {
 }
 
 .userMessage .messageText {
-  background: linear-gradient(135deg, var(--user-bubble), var(--primary));
+  background: var(--user-bubble) !important;
   border-bottom-right-radius: 4px;
-  color: white;
+  color: #000000 !important;
 }
 
 .botMessage .messageText {
-  background: var(--bot-bubble);
+  background: var(--bot-bubble) !important;
   border: 1px solid var(--border);
   border-bottom-left-radius: 4px;
-  color: var(--text-primary);
+  color: #000000 !important;
 }
+
 
 .messageMeta {
   display: flex;
@@ -345,6 +350,20 @@ html.light-mode {
 .messageTime {
   font-size: 11px;
   color: var(--text-secondary);
+}
+
+.messageText {
+  color: var(--text-primary);
+}
+
+.botMessage .messageText {
+  background: var(--bot-bubble);
+  color: var(--text-primary);
+}
+
+.userMessage .messageText {
+  background: var(--user-bubble);
+  color: var(--text-primary);
 }
 
 .readIndicator {
@@ -434,6 +453,15 @@ html.light-mode {
 .input::placeholder {
   color: var(--text-tertiary);
 }
+
+/* .input {
+  background: var(--surface-light);
+  color: var(--text-primary);
+}
+
+.input::placeholder {
+  color: var(--text-tertiary);
+} */
 
 .sendBtn {
   width: 48px;
